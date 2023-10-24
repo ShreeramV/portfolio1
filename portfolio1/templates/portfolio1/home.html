@@ -1,0 +1,19 @@
+<h1>shows up!</h1>
+
+{% load static %}
+
+<a href="{% static 'portfolio1/The BMW M5 Competition.pdf' %}">resume</a>
+
+<img src="{% static 'portfolio1/yellow-haired-girl-hitching-ride-on-a-car-wallpaper-1400x1050_21.jpg' %}"height = 200 width = 200>
+
+{% for pro in projects %}
+<h2>{{pro.title}}</h2>
+<p>{{pro.description}}</p>
+<img src="{{pro.image.url}}">
+
+{% if pro.url %}
+<br>
+<a href="{{project.url}}">Link</a>
+</br>
+{% endif %}
+{% endfor %}
